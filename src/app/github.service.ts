@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from './user';
 import { Repository } from './repository';
+import { Organization } from './organization';
 
 @Injectable({
   providedIn: 'root',
@@ -21,5 +22,8 @@ export class GithubService {
     return this.http.get<Repository[]>(this.userUrl+'/repos');
   }
 
-  
+  getOrgs(): Observable<Organization[]> {
+    return this.http.get<Organization[]>(this.userUrl+'/orgs');
+  }
+
 }
