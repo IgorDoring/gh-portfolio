@@ -4,6 +4,5 @@ export interface User {
   blog: string;
   location: string;
   bio: string;
-  twitter_username: string;
   followers: number;
 }
